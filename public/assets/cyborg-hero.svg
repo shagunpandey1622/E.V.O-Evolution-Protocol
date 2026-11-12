@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <!-- Dark Sci-fi Background Glow -->
+    <radialGradient id="heroGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#42EAFF" stop-opacity="0.22"/>
+      <stop offset="40%" stop-color="#987BFF" stop-opacity="0.14"/>
+      <stop offset="75%" stop-color="#091426" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#050812" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Metallic Titanium Gradient -->
+    <linearGradient id="metalPlate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A5568"/>
+      <stop offset="25%" stop-color="#A0AEC0"/>
+      <stop offset="50%" stop-color="#2D3748"/>
+      <stop offset="75%" stop-color="#CBD5E0"/>
+      <stop offset="100%" stop-color="#1A202C"/>
+    </linearGradient>
+
+    <!-- Carbon Fiber Dark Texture -->
+    <linearGradient id="carbonDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="50%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+
+    <!-- Human Organic Skin Gradient -->
+    <linearGradient id="humanSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6D5C2"/>
+      <stop offset="45%" stop-color="#E2B199"/>
+      <stop offset="85%" stop-color="#B7795C"/>
+      <stop offset="100%" stop-color="#7A4833"/>
+    </linearGradient>
+
+    <!-- Electric Cyan Glowing Circuit -->
+    <linearGradient id="cyanCircuit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#42EAFF"/>
+      <stop offset="100%" stop-color="#0080FF"/>
+    </linearGradient>
+
+    <!-- Neon Violet Circuit -->
+    <linearGradient id="violetCircuit" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#987BFF"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="cyanGlowEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="violetGlowEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Carbon Fiber Pattern -->
+    <pattern id="carbonPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#121824"/>
+      <path d="M0 6 L6 0 L12 6 L6 12 Z" fill="#1A2332" opacity="0.6"/>
+      <circle cx="6" cy="6" r="1.5" fill="#42EAFF" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Ambient Backdrop -->
+  <rect width="800" height="1000" fill="url(#heroGlow)"/>
+
+  <!-- Background Cyber HUD Grids & Circular Gauges -->
+  <g opacity="0.35">
+    <circle cx="400" cy="450" r="320" fill="none" stroke="#42EAFF" stroke-width="1" stroke-dasharray="8 6"/>
+    <circle cx="400" cy="450" r="345" fill="none" stroke="#987BFF" stroke-width="0.8" stroke-dasharray="14 18"/>
+    <circle cx="400" cy="450" r="280" fill="none" stroke="#42EAFF" stroke-width="0.5"/>
+    <line x1="80" y1="450" x2="720" y2="450" stroke="#42EAFF" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="400" y1="120" x2="400" y2="780" stroke="#42EAFF" stroke-width="0.5" stroke-dasharray="4 4"/>
+    
+    <!-- Targeting Crosshairs -->
+    <path d="M380 450 L390 450 M410 450 L420 450 M400 430 L400 440 M400 460 L400 470" stroke="#42EAFF" stroke-width="1.5"/>
+    <rect x="360" y="410" width="80" height="80" fill="none" stroke="#42EAFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Cybernetic Humanoid Composition -->
+  <g transform="translate(0, 30)">
+    <!-- Neck & Trapezius - Organic Left Side -->
+    <path d="M280 620 Q320 660 330 820 L400 850 L400 620 Z" fill="url(#humanSkin)" opacity="0.9"/>
+    
+    <!-- Neck & Trapezius - Cybernetic Right Side -->
+    <path d="M400 620 L400 850 L480 820 Q490 660 530 620 Z" fill="url(#carbonDark)"/>
+    <!-- Titanium Cervical Hydraulic Pistons -->
+    <rect x="420" y="650" width="22" height="150" rx="6" fill="url(#metalPlate)" stroke="#42EAFF" stroke-width="1"/>
+    <rect x="455" y="660" width="18" height="135" rx="5" fill="url(#metalPlate)" stroke="#987BFF" stroke-width="1"/>
+    <line x1="431" y1="670" x2="431" y2="780" stroke="#42EAFF" stroke-width="2" filter="url(#cyanGlowEffect)"/>
+    <line x1="464" y1="680" x2="464" y2="770" stroke="#987BFF" stroke-width="2" filter="url(#violetGlowEffect)"/>
+
+    <!-- Collarbone & Chest Cybernetic Plate -->
+    <path d="M240 800 L400 840 L560 800 L580 920 L220 920 Z" fill="url(#carbonPattern)" stroke="#42EAFF" stroke-width="1"/>
+    <path d="M400 840 L400 950" stroke="#42EAFF" stroke-width="2" stroke-dasharray="6 4"/>
+    <circle cx="400" cy="880" r="14" fill="#091426" stroke="#42EAFF" stroke-width="2"/>
+    <circle cx="400" cy="880" r="6" fill="#42EAFF" filter="url(#cyanGlowEffect)"/>
+
+    <!-- Head / Cranium Silhouette -->
+    <!-- Left Face: Natural Human Features -->
+    <path d="M400 210 Q320 210 270 280 Q235 340 240 440 Q245 520 290 590 Q340 645 400 670 Z" 
+          fill="url(#humanSkin)"/>
+
+    <!-- Left Human Eye & Brow -->
+    <path d="M300 410 Q335 395 370 415" stroke="#4A2E1B" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M310 435 Q340 415 370 435 Q340 455 310 435 Z" fill="#FFFFFF"/>
+    <circle cx="340" cy="435" r="14" fill="#3D2314"/>
+    <circle cx="342" cy="434" r="7" fill="#0A0604"/>
+    <circle cx="345" cy="430" r="3" fill="#FFFFFF"/>
+
+    <!-- Left Human Nose & Mouth -->
+    <path d="M380 430 Q370 510 365 525 Q385 528 400 528" stroke="#8C4E33" stroke-width="3" fill="none"/>
+    <path d="M335 570 Q370 560 400 562 Q370 580 335 570 Z" fill="#A85744"/>
+    <path d="M345 572 Q372 588 400 587" stroke="#8C3F2D" stroke-width="2" fill="none"/>
+
+    <!-- Left Human Cheek Contour & Shadowing -->
+    <path d="M260 440 Q285 510 340 540" stroke="#C2876D" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4"/>
+
+    <!-- Center Line of Convergence (Neural Suture / Cybernetic Border) -->
+    <path d="M400 200 L400 260 L408 310 L395 380 L406 460 L398 540 L404 600 L400 675" 
+          stroke="#42EAFF" stroke-width="3" fill="none" filter="url(#cyanGlowEffect)"/>
+
+    <!-- Right Face: Advanced Cybernetic Exoskeleton & Carbon-Titanium Plating -->
+    <!-- Cranial Titanium Shell -->
+    <path d="M400 210 Q480 210 535 280 Q570 340 565 440 Q560 520 515 590 Q465 645 400 670 Z" 
+          fill="url(#carbonDark)"/>
+    <path d="M400 210 Q480 210 535 280 Q570 340 565 440 Q560 520 515 590 Q465 645 400 670 Z" 
+          fill="url(#carbonPattern)" opacity="0.8"/>
+
+    <!-- Segmented Titanium Faceplates -->
+    <!-- Temporal Plate -->
+    <path d="M420 235 L510 280 L490 350 L415 320 Z" fill="url(#metalPlate)" stroke="#42EAFF" stroke-width="1.2" opacity="0.95"/>
+    <circle cx="430" cy="250" r="3" fill="#42EAFF"/>
+    <circle cx="500" cy="290" r="3" fill="#42EAFF"/>
+
+    <!-- Zygomatic Cheek Armor Plate -->
+    <path d="M420 475 L525 460 L505 550 L425 540 Z" fill="url(#metalPlate)" stroke="#987BFF" stroke-width="1.2" opacity="0.9"/>
+    
+    <!-- Mandibular Jawbone Actuator -->
+    <path d="M425 560 L515 570 L480 635 L405 665 Z" fill="#161F30" stroke="#42EAFF" stroke-width="1.5"/>
+    <circle cx="490" cy="580" r="7" fill="url(#metalPlate)" stroke="#42EAFF" stroke-width="1.5"/>
+    <line x1="490" y1="580" x2="445" y2="630" stroke="#42EAFF" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Right Cybernetic Eye: High-Tech Optical Sensor Matrix -->
+    <!-- Eye Socket Recess -->
+    <rect x="420" y="405" width="85" height="50" rx="10" fill="#080D1A" stroke="#42EAFF" stroke-width="2"/>
+    <path d="M410 395 L515 395 L505 405 L420 405 Z" fill="url(#metalPlate)" stroke="#42EAFF" stroke-width="1"/>
+    
+    <!-- Optical Lens & Aperture -->
+    <circle cx="462" cy="430" r="22" fill="#050812" stroke="#987BFF" stroke-width="2"/>
+    <circle cx="462" cy="430" r="16" fill="none" stroke="#42EAFF" stroke-width="2" stroke-dasharray="4 3"/>
+    <!-- Glowing Iris Aperture -->
+    <circle cx="462" cy="430" r="9" fill="#42EAFF" filter="url(#cyanGlowEffect)"/>
+    <circle cx="462" cy="430" r="4" fill="#FFFFFF"/>
+    
+    <!-- Targeting Reticle on Right Eye -->
+    <path d="M435 430 L442 430 M482 430 L489 430 M462 403 L462 410 M462 450 L462 457" stroke="#42EAFF" stroke-width="1.5"/>
+    <text x="440" y="390" fill="#42EAFF" font-family="'Orbitron', sans-serif" font-size="9" letter-spacing="1">LENS: 0.1nm IR</text>
+
+    <!-- Synthetic Ear / Cybernetic Audio Array -->
+    <path d="M560 380 Q585 410 580 470 Q565 520 550 535" fill="none" stroke="url(#metalPlate)" stroke-width="8"/>
+    <circle cx="572" cy="440" r="10" fill="#0A1220" stroke="#42EAFF" stroke-width="2"/>
+    <circle cx="572" cy="440" r="4" fill="#987BFF" filter="url(#violetGlowEffect)"/>
+    <line x1="565" y1="455" x2="550" y2="510" stroke="#42EAFF" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+    <!-- Neural Circuit Traces (Branching across skull & temple) -->
+    <g filter="url(#cyanGlowEffect)">
+      <path d="M410 220 L440 240 L440 270 L470 290" stroke="#42EAFF" stroke-width="1.8" fill="none"/>
+      <circle cx="470" cy="290" r="2.5" fill="#FFFFFF"/>
+
+      <path d="M412 300 L430 310 L450 310 L470 340" stroke="#42EAFF" stroke-width="1.5" fill="none"/>
+      <circle cx="470" cy="340" r="2.5" fill="#42EAFF"/>
+
+      <path d="M408 360 L425 365 L435 385" stroke="#42EAFF" stroke-width="1.5" fill="none"/>
+
+      <path d="M410 490 L425 500 L450 500 L475 525" stroke="#987BFF" stroke-width="1.8" fill="none" filter="url(#violetGlowEffect)"/>
+      <circle cx="475" cy="525" r="2.5" fill="#C084FC"/>
+
+      <path d="M406 580 L420 590 L450 590" stroke="#42EAFF" stroke-width="1.5" fill="none"/>
+      <circle cx="450" cy="590" r="2.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Exposed Synaptic Light Strips (Head top) -->
+    <path d="M440 190 Q480 200 520 230" stroke="#42EAFF" stroke-width="3" fill="none" filter="url(#cyanGlowEffect)"/>
+    <path d="M460 175 Q500 185 535 215" stroke="#987BFF" stroke-width="2" fill="none" filter="url(#violetGlowEffect)"/>
+
+    <!-- Technical Telemetry Labels overlaid on image -->
+    <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#42EAFF" opacity="0.85">
+      <text x="560" y="270">SYS // NEURAL_LINK: 99.8%</text>
+      <text x="560" y="285">CHASSIS: TITANIUM-CARBON V5</text>
+      <text x="560" y="300">CORE SYNC: STABLE [2049]</text>
+      <line x1="520" y1="280" x2="555" y2="280" stroke="#42EAFF" stroke-width="1"/>
+    </g>
+
+    <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#987BFF" opacity="0.85">
+      <text x="120" y="320">ORGANIC CORTEX: BIOLOGICAL</text>
+      <text x="120" y="335">COGNITIVE LATENCY: 0.18ms</text>
+      <text x="120" y="350">SYNERGY INDEX: MAXIMUM</text>
+      <line x1="260" y1="330" x2="295" y2="330" stroke="#987BFF" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- Holographic Glitch / Particle Accents -->
+  <g opacity="0.7">
+    <rect x="390" y="360" width="22" height="2" fill="#42EAFF"/>
+    <rect x="440" y="480" width="35" height="1.5" fill="#987BFF"/>
+    <rect x="360" y="520" width="18" height="2" fill="#42EAFF"/>
+    <circle cx="210" cy="400" r="2" fill="#42EAFF"/>
+    <circle cx="610" cy="420" r="2" fill="#987BFF"/>
+    <circle cx="580" cy="560" r="2" fill="#42EAFF"/>
+    <circle cx="230" cy="620" r="2" fill="#987BFF"/>
+  </g>
+</svg>
